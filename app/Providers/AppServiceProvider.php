@@ -28,10 +28,6 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        /*if( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) {
-            URL::forceScheme('https');
-        }*/
-        //setting language
         if(isset($_COOKIE['language'])) {
             \App::setLocale($_COOKIE['language']);
         } else {
